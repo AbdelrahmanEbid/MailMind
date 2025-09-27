@@ -1,3 +1,6 @@
 """Specialized agents for MailMind."""
 
-__all__ = []
+from mailmind.agents.reader import create_reader_agent  
+__all__ = [
+    "create_reader_agent",
+]

@@ -36,6 +36,13 @@ class MailMindConfig:
         default=2048,
         metadata={"description": "Maximum tokens for LLM responses"},
     )
+
+    # Email Provider Configuration
+    email_provider: Literal["gmail"] = field(
+        default="gmail",
+        metadata={"description": "Primary email provider (gmail only for now)"},
+    )
+
     # Gmail API Configuration
     gmail_client_id: Optional[str] = field(
         default=None,

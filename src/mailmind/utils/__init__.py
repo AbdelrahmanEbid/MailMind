@@ -1,3 +1,7 @@
 """Utility functions for MailMind."""
 
-__all__ = []
+from mailmind.utils.gmail_client import GmailClient
+__all__ = [
+    "GmailClient",
+]
+

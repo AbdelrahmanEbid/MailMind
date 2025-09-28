@@ -65,6 +65,32 @@ class MailMindConfig:
         metadata={"description": "Google API key for Gemini LLM"},
     )
 
+    langsmith_api_key: Optional[str] = field(
+        default=None,
+        metadata={"description": "LangSmith API key for monitoring and tracing"},
+    )
+
+    # System Settings
+    max_search_results: int = field(
+        default=50,
+        metadata={"description": "Maximum number of search results to return per query"},
+    )
+
+    max_email_length: int = field(
+        default=10000,
+        metadata={"description": "Maximum email length to process (characters)"},
+    )
+
+    timeout_seconds: int = field(
+        default=30,
+        metadata={"description": "Request timeout in seconds"},
+    )
+
+    retry_attempts: int = field(
+        default=3,
+        metadata={"description": "Number of retry attempts for failed operations"},
+    )
+    
     def __post_init__(self) -> None:
         """Load environment variables for fields that weren't explicitly set."""
         for f in fields(self):

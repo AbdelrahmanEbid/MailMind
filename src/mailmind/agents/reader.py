@@ -41,8 +41,10 @@ def create_reader_agent(config: MailMindConfig):
             max_tokens=config.max_tokens,
         )
     else:
+        # For Google Gemini models, specify the provider explicitly
         model = init_chat_model(
             config.model,
+            model_provider="google_genai",
             temperature=config.model_temperature,
             max_tokens=config.max_tokens,
         )

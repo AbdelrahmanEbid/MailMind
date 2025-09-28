@@ -19,9 +19,9 @@ class MailMindConfig:
 
     # LLM Configuration
     model: Annotated[str, {"__template_metadata__": {"kind": "llm"}}] = field(
-        default="google_genai/gemini-1.5-flash",
+        default="google_genai/gemini-2.5-flash",
         metadata={
-            "description": "Primary LLM model for AI operations. Format: provider/model-name"
+            "description": "Primary LLM model for AI operations. Format: provider/model-name (e.g., 'google_genai/gemini-2.5-flash')"
         },
     )
 

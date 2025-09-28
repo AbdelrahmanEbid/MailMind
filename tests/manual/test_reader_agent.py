@@ -11,6 +11,9 @@ The test will:
 3. Test email reading by ID
 4. Test email content parsing and analysis
 5. Verify semantic analysis (entities, intent, sentiment)
+    Entities (like names, URLs, dates)
+    ntent classification (e.g., meeting request, urgent, etc.)
+    Sentiment analysis (positive/negative/neutral tone)
 
 Requirements:
 - .env file with Gmail API credentials

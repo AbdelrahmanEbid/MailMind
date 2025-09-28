@@ -55,7 +55,7 @@ class MailMindConfig:
     )
 
     gmail_redirect_uri: str = field(
-        default="http://localhost:8080/callback",
+        default="http://localhost:8081/callback",
         metadata={"description": "OAuth redirect URI for Gmail authentication"},
     )
 

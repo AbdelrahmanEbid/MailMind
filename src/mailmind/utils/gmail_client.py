@@ -30,7 +30,7 @@ class GmailClient:
         self,
         client_id: str,
         client_secret: str,
-        redirect_uri: str = "http://localhost:8080/callback"
+        redirect_uri: str = "http://localhost:8081/callback"
     ):
         """Initialize Gmail client.
         

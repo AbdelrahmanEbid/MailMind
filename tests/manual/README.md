@@ -67,6 +67,26 @@ python tests/manual/test_gmail_connection.py
 - ✅ Attachment detection
 - ✅ Detailed error reporting
 
+### 3. Reader Agent Test (`test_reader_agent.py`)
+
+**Purpose**: Test the MailMind Reader Agent as a ReAct agent with real Gmail emails
+
+**Usage**:
+```bash
+cd /path/to/MailMind
+python tests/manual/test_reader_agent.py
+```
+
+**What it does**:
+- ✅ Creates and tests the Reader Agent (ReAct architecture)
+- ✅ Uses real Gmail emails (no mocking)
+- ✅ Tests email reading by ID functionality
+- ✅ Tests email content parsing and semantic analysis
+- ✅ Verifies entity extraction (emails, URLs, dates, etc.)
+- ✅ Tests intent classification and sentiment analysis
+- ✅ Validates error handling with invalid inputs
+- ✅ Comprehensive agent reasoning and tool usage verification
+
 ### Key Differences Between Both Tests:
 
 | Feature | Simple Test | Comprehensive Test |
@@ -119,6 +139,12 @@ python tests/manual/test_gmail_connection.py
 4. **Import errors**:
    - Run from project root directory
    - Install missing dependencies: `pip install -e .`
+
+5. **Reader Agent test failures**:
+   - Ensure `GOOGLE_API_KEY` is set (required for LLM)
+   - Check that Gmail emails are available in your account
+   - Verify LangChain dependencies: `pip install langchain langgraph`
+   - For model errors, try different model: `MODEL=google_genai/gemini-1.5-flash`
 
 ### Debug Mode
 

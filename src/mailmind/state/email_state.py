@@ -24,6 +24,9 @@ class InputState:
     user_id: str = field(default="default_user")
     """Unique identifier for the user making the request."""
 
+    email_provider: str = field(default="gmail")
+    """Email provider to use (gmail for now)."""
+
 
 @dataclass(kw_only=True)
 class OutputState:
@@ -37,6 +40,10 @@ class OutputState:
 
     status: str = field(default="pending")
     """Operation status (success, error, pending)."""
+
+    metadata: Dict[str, Any] = field(default_factory=dict)
+    """Additional metadata about the operation."""
+
     message: str = field(default="")
     """Human-readable message describing the result."""
 
